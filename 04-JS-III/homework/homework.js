@@ -30,8 +30,9 @@ function incrementarPorUno(array) {
   var masUno = [];
 
   for (var i = 0 ; i < array.length; i++){
-    
+     masUno.push(array[i]);
   }
+  return masUno;
 }
 
 
