@@ -30,7 +30,7 @@ function incrementarPorUno(array) {
   var masUno = [];
 
   for (var i = 0 ; i < array.length; i++){
-     masUno.push(array[i]);
+     masUno.push(array[i]+1);
   }
   return masUno;
 }
@@ -40,6 +40,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento);
+  return array;
 }
 
 
@@ -48,6 +50,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -57,6 +61,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+
 }
 
 
