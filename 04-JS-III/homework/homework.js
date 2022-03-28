@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { join } = require("@11ty/eleventy/src/TemplatePath");
+
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
@@ -62,7 +64,7 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
 
-
+  return palabras.join(' ');
 
 }
 
@@ -79,11 +81,22 @@ function arrayContiene(array, elemento) {
   return false;
 }
 
+function sumar (numero1,numero2){
+  var lista = [];
+  for (var i = 0; i < numero1 ; i++){
+
+  }
+}
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var resultado = 0;
+  for (var i = 0 ; i < numeros.length ; i++){
+    resultado = numeros[i]+ resultado;
+  }
+  return (resultado);
 
 }
 
@@ -92,6 +105,8 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+    return (agregarNumeros(resultadosTest) / resultadosTest.length);
+  
 }
 
 
@@ -99,12 +114,20 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  // var maximo;
+  var numMayor = 0;
+   for ( var i = 0 ; i < numeros.length; i++){
+     if (numeros[i] > numMayor){
+       numMayor = numeros[i];
+     }
+   }
+   return numMayor ;
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 }
 
@@ -112,7 +135,13 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var agregar = 0;
+  for (var i = 0; i < arreglo.length; i++){
+    if (arreglo[i]>18){
+      agregar = agregar + 1;
+    }
+  }
+  return agregar;
 }
 
 
@@ -120,8 +149,12 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí
+  if (numeroDeDia===1||numeroDeDia===7){
+    return ("Es fin de semana");
+  }else if (numeroDeDia > 1 && numeroDeDia < 7){
+    return ("Es dia Laboral");
+  }
 } 
 
 
@@ -129,15 +162,27 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+
+  var esNueve = n.toString();
+  if (esNueve[0]===9){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
-  
+  //Escribe tu código aquí 
+  var soloTrue; 
+  for (var i = 0; i < arreglo.length; i++){
+    if (arreglo[i]===true){
+      soloTrue = arreglo[i] && soloTrue;
+    }
+  }
+  return arreglo;
 } 
 
 
