@@ -81,12 +81,6 @@ function arrayContiene(array, elemento) {
   return false;
 }
 
-function sumar (numero1,numero2){
-  var lista = [];
-  for (var i = 0; i < numero1 ; i++){
-
-  }
-}
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
@@ -121,7 +115,7 @@ function numeroMasGrande(numeros) {
        numMayor = numeros[i];
      }
    }
-   return numMayor ;
+   return numMayor;
 }
 
 
@@ -169,6 +163,7 @@ function empiezaConNueve(n) {
   }else{
     return false;
   }
+
 }
 
 
@@ -176,14 +171,16 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
-  var soloTrue; 
-  for (var i = 0; i < arreglo.length; i++){
-    if (arreglo[i]===true){
-      soloTrue = arreglo[i] && soloTrue;
-    }
-  }
-  return arreglo;
-} 
+  esIgual = arreglo[0];
+     for ( var i = 1 ; i < arreglo.length; i++){
+     if (esIgual === arreglo[i]){
+       esIgual = arreglo[i] && esIgual;
+       return true;
+     }else{
+       return false;
+     }
+   }
+}
 
 
 function mesesDelAño(array) {
@@ -191,6 +188,8 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+
+  return (array.short());
 }
 
 
@@ -198,6 +197,13 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var mayoresAcien = [];
+  for (var i = 0; i < array.length ; i++){
+    if (array[i]>100 && array[i] < 200){
+      mayoresAcien = array[i] + mayoresAcien;
+    }
+  }
+  return mayoresAcien;
 }
 
 
