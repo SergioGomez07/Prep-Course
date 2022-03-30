@@ -199,11 +199,11 @@ function mayorACien(array) {
   // Tu código:
   var mayoresAcien = [];
   for (var i = 0; i < array.length ; i++){
-    if (array[i]>100 && array[i] < 200){
-      mayoresAcien = array[i] + mayoresAcien;
+    if (array[i]>100 && array[i] < 201){
+      mayoresAcien.push(array[i]);
     }
   }
-  return mayoresAcien;
+  return mayoresAcien; //retorna la lista pero como un string
 }
 
 
