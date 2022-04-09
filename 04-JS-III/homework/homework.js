@@ -123,6 +123,14 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if (arguments.length === 0){
+    return 0;
+  }
+  var multiplicar = 1;
+  for (var i = 0 ; i < arguments.length; i++){
+    multiplicar = multiplicar * arguments[i];
+  }
+  return multiplicar;
 }
 
 
@@ -171,16 +179,7 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
-  esIgual = arreglo[0];
-     for ( var i = 1 ; i < arreglo.length; i++){
-     if (esIgual === arreglo[i]){
-       esIgual = arreglo[i] && esIgual;
-       return true;
-     }else{
-       return false;
-     }
-   }
-}
+  }
 
 
 function mesesDelAño(array) {
@@ -203,7 +202,7 @@ function mayorACien(array) {
       mayoresAcien.push(array[i]);
     }
   }
-  return mayoresAcien; //retorna la lista pero como un string
+  return mayoresAcien;
 }
 
 
